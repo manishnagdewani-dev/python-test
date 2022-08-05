@@ -1,7 +1,7 @@
 language: ruby
 os:
 - linux
-dist: trusty
+dist: focal
 sudo: true
 services:
 - docker
@@ -10,8 +10,6 @@ cache:
   - "$HOME/.cache/"
 before_install:
 - docker --version
-- sudo apt-get update
-- sudo apt-get install python3
 - pip install awscli --upgrade --user
 - export PATH=$PATH:$HOME/.local/bin
 
