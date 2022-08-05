@@ -1,0 +1,17 @@
+language: ruby
+os:
+- linux
+dist: trusty
+sudo: true
+services:
+- docker
+cache:
+  directories:
+  - "$HOME/.cache/"
+before_install:
+- docker --version
+- pip install awscli --upgrade --user
+- export PATH=$PATH:$HOME/.local/bin
+
+script:
+  true
