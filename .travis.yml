@@ -5,13 +5,13 @@ dist: trusty
 sudo: true
 services:
 - docker
-python:
-  - "3.9"
 cache:
   directories:
   - "$HOME/.cache/"
 before_install:
 - docker --version
+- sudo apt-get update
+- sudo apt-get install python3
 - pip install awscli --upgrade --user
 - export PATH=$PATH:$HOME/.local/bin
 
